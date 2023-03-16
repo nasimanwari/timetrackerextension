@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name": "My Awesome Extension",
+    "version": "1.0",
+    "description": "An extension that helps you organize your bookmarks.",
+    "icons": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+    "browser_action": {
+      "default_popup": "popup.html"
+    },
+    "permissions": [
+      "tabs",
+      "storage"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    }
+  }
+  
